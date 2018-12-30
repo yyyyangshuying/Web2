@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	
+		
+		input{
+			margin: 10px;
+		}
+		textarea{
+			margin: 10px;
+		}
+	</style>
+</head>
+<body>
+	<!-- 表单专门用来收集用户信息 -->
+	<!-- <form ></form> -->
+	<form action="" method="get"><!-- 提交后地址栏file:///D:/%E7%BD%91%E9%A1%B5%E5%88%B6%E4%BD%9C/%E5%AE%9E%E8%AE%AD1/03%E8%A1%A8%E5%8D%95.html?username=ann&password=123 -->
+		<label for="userid">username:</label><!-- 用for来捆绑id 光标点到名字可以直接到后面的输入框-->
+		<!-- input用于账号密码单选多选提交 -->
+		<input id="userid" type="text" name="username" placeholder="user" ><!-- placeholder提示用户输入框该输入的东西 -->
+		<br>
+		<label for="passid">password:</label>
+		
+		<input id="passid" type="password" name="password" placeholder="password">
+		<br>
+		<!-- 单选 -->
+		<span>性别：</span>
+		<input type="radio" name="sex" value="male">男<!-- 传值必须要name和value，value 值要为英文，方便传值给后台-->
+		<input type="radio" name="sex" value="female" checked>女<!-- checked也是属性等于属性值，为默认选中 -->
+		<br>
+		<!-- 多选 -->
+		<span id="">
+			兴趣:
+		</span>
+		<input type="checkbox" name="hobby" value="basketball">篮球
+		<input type="checkbox" name="hobby" value="sing">唱歌
+		<input type="checkbox" name="hobby" value="game">游戏
+    	<br>
+    	<!-- 下拉列表 -->
+    	籍贯：
+    	<select name="birthplace" ><!-- multiple为多选 ，属性等于属性值的时候可以只写一个， multiple="multiple"或直接写multiple-->
+    		<!-- <option value="jiangxi"></option> option+tab出来自带value一定要填写value不然无法传值；不写的话在select直接填name -->
+    		<option>江西</option>
+    		<option>上饶</option>
+    		<option>余干</option>
+    	</select>
+    	<br>
+    	<!-- 文本域 -->
+    	<textarea cols="30" rows="10"></textarea><!-- cols为行，row为列，不用写单位，一般用来编写自我介绍 -->
+    	<br>
+		<input type="submit" >
+		<input type="reset" value="重置">
+		<input type="submit" value="取消">
+	</form>
+
+
+</body>
+</html>
